@@ -1,4 +1,3 @@
-// Adding Styles: Add css styles to the components. Use the Index.css to this little project
 
 import Navbar from './Navbar';
 import Home from './Home';
