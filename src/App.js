@@ -1,30 +1,22 @@
-// Dynamic Values in Templates: We can create variables in order to display at the template.
+// Multiple Components: App.js is the root component. All commponents created are nested to this one.
 
 import './App.css';
+// 04. Import the Navbar component
+import Navbar from './Navbar';
+// 07. Import Home component
+import Home from './Home';
+
 
 function App() {
-  // You can type any javascript inside the function before the return
-  // 01. Create variables: NOTE: The component don't accept booleans and objects.
-  const title = 'Welcome to the new blog';
-  const likes = 50;
-  const link = 'http://www.google.com';
-
-
   return (
     <div className="App">
+
+      {/* 05. Nest the Navbar here */}
+      <Navbar />
+
       <div className="content">
-        {/* 02. Import the dynamic value "title" and it will display at the browser */}
-        <h1>{ title }</h1>
-        <p>Liked: { likes } times</p>
-        <a href={ link }>Google Site</a>
-
-        {/* 03. We can also put the directly JS into the dynamic value here between the curly braces */}
-
-        <p>{ 10 }</p>
-        <p>{ "Hello everybody" }</p>
-        <p>{ [1,2,3,4,5] }</p>
-        <p>{ Math.random() * 10 }</p>
-        
+        {/* 08. Nest the home component here */}
+        <Home />
       </div>
     </div>
   );
