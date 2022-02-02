@@ -1,5 +1,3 @@
-// 06. Create the Homepage component
-
 const Home = () => {
   return ( 
     <div className="home">
