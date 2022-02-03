@@ -1,3 +1,5 @@
+// Reusing components: We are going to reuse specific data from blogs
+
 import { useState } from "react";
 import BlogList from "./BlogList";
 
@@ -11,8 +13,9 @@ const Home = () => {
   
   return ( 
     <div className="home">
-      {/* 03. Nest the BlogList component, and pass the data of the blogs (prop) */}
       <BlogList blogs={blogs} title="All Blogs!"/>
+      {/* 01. Filter just the blogs made for mario */}
+      <BlogList blogs={blogs.filter((blog) => blog.author === "mario")} title="Mario's Blogs"/>
     </div>
   );
 }
