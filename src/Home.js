@@ -1,11 +1,8 @@
-// Outputting lists: How to show all the items cycling each one.
-
-// 01. Import the useState Hook
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 const Home = () => {
 
-  // 02. Set the useState, it means, the initial state (initial blogs)
   const [blogs, setBlogs] = useState([
     { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
     { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
@@ -14,13 +11,8 @@ const Home = () => {
   
   return ( 
     <div className="home">
-      {/* 03. Using JavaScript, with the map method cycle all the blogs to show in this template */}
-      {blogs.map((blog) => (
-        <div className="blog-preview" key={blog.id}>
-          <h2>{ blog.title }</h2>
-          <p>Written by { blog.author }</p>
-        </div>
-      ))}
+      {/* 03. Nest the BlogList component, and pass the data of the blogs (prop) */}
+      <BlogList blogs={blogs} title="All Blogs!"/>
     </div>
   );
 }
