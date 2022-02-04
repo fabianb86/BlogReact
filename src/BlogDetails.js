@@ -1,17 +1,26 @@
-// Route parameter: To show different pages at the same component, like every blog by id
+// Reusing Custom Hook: To fetch the information of each blog
 
 import { useParams } from "react-router-dom";
+import useFetch from "./useFetch";
 
-// 01. Create this file to the blog details component
 const BlogDetails = () => {
 
-  // 03. Grab the id of the blog
   const { id } = useParams();
-
+  // 01. Import and set the route for each id
+  const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
 
   return ( 
     <div className="blog-details">
-      <h2>Blog Details - { id }</h2>
+      {/* 02. Set the template */}
+      { isPending && <div>Loading...</div>}
+      { error && <div>{ error }</div>}
+      { blog && (
+        <article>
+          <h2>{ blog.title }</h2>
+          <p>Written by { blog.author }</p>
+          <div>{ blog.body }</div>
+        </article>
+      )}
     </div>
   );
 }
