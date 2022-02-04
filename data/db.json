@@ -23,6 +23,12 @@
       "body": "Segundo blog",
       "author": "yoshi",
       "id": 4
+    },
+    {
+      "title": "Test 3",
+      "body": "When the user clicks add blog, it redirects to the homepage.",
+      "author": "yoshi",
+      "id": 5
     }
   ]
 }
