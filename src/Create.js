@@ -1,7 +1,4 @@
-// Programmatic Redirects: To redirect the user to the homepage
-
 import { useState } from "react";
-// 01. Import usehistory hook
 import { useHistory } from "react-router-dom";
 
 const Create = () => {
@@ -9,7 +6,6 @@ const Create = () => {
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('mario');
   const [ isPending, setIsPending] = useState(false);
-  // 02. Set state
   const history = useHistory();
 
   const handleSubmit = (e) => {
@@ -25,7 +21,6 @@ const Create = () => {
     }).then(() =>{
       console.log('new blog added')
       setIsPending(false);
-      // 03. Redirect to the homepage
       history.push('/');
     })
 

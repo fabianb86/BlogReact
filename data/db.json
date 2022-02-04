@@ -11,24 +11,6 @@
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted",
       "author": "yoshi",
       "id": 2
-    },
-    {
-      "title": "Test 1",
-      "body": "Primer blog añadido",
-      "author": "mario",
-      "id": 3
-    },
-    {
-      "title": "Test 2",
-      "body": "Segundo blog",
-      "author": "yoshi",
-      "id": 4
-    },
-    {
-      "title": "Test 3",
-      "body": "When the user clicks add blog, it redirects to the homepage.",
-      "author": "yoshi",
-      "id": 5
     }
   ]
 }
