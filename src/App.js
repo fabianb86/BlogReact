@@ -1,22 +1,24 @@
-// The react router : To manage different pages in the website. Install react router v 5
+// Exact match routes: you must put the word exact before the path (Routes) when you're adding components.
 import Navbar from './Navbar';
 import Home from './Home';
-// 01. import browserRouter, Route, Switch
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Create from './Create';
 
 
 function App() {
   return (
-    // 02. Surround the application with the router component
     <Router>
       <div className="App">
         <Navbar />
         <div className="content">
-          {/* 03. Set a switch component to makes sure that only one route shows at any one time */}
           <Switch>
-            {/* 04. Set the pages. Each one with route*/}
-            <Route path="/">
+            {/* 03. Add exact to no interfere with the other paths */}
+            <Route exact path="/">
               <Home />
+            </Route>
+            {/* 02. Add the Create component and import it */}
+            <Route path="/create">
+              <Create />
             </Route>
           </Switch>
         </div>
