@@ -18,7 +18,6 @@ function App() {
             <Route path="/create">
               <Create />
             </Route>
-            {/* 02. Set the blog details component */}
             <Route path="/blogs/:id">
               <BlogDetails />
             </Route>
