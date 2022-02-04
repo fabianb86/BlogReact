@@ -1,4 +1,3 @@
-// 01. New component that is a page to add a new blog
 const Create = () => {
   return ( 
     <div className="create">
