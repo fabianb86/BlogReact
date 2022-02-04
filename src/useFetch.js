@@ -1,5 +1,3 @@
-// useEffect Cleanup: When we go to another page, the custom hook is still trying to fetch the data a that origins an unmounted component error. To fix this, we use the useEffect cleanup hook.
-
 import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
@@ -9,10 +7,8 @@ const useFetch = (url) => {
 
   useEffect(() =>{
 
-    // 01. Abort controller
     const abortCont = new AbortController();
 
-    // 02. Set the signal property as a second parameter of the fetch function
     fetch(url, { signal: abortCont.signal})
       .then(res =>{
         if(!res.ok) {
@@ -26,7 +22,6 @@ const useFetch = (url) => {
         setError(null);
       })
       .catch(err =>{
-        // 04. With an if statement, ensure to not keep fetching
         if (err.name === 'AbortError') {
           console.log('fetch aborted ')
         } else {
@@ -35,7 +30,6 @@ const useFetch = (url) => {
         }
       })
 
-    // 03. Set the cleanup function
     return () => abortCont.abort();
 
   }, [url]);
