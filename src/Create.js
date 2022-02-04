@@ -1,4 +1,4 @@
-// Submit Events: To handle the event of submit the form and do something with this data
+// Making a POST request: To send the data tracked to the database
 
 import { useState } from "react";
 
@@ -6,21 +6,31 @@ const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('mario');
+  // 02. A state for loading the new post request
+  const [ isPending, setIsPending] = useState(false);
 
-  // 01. Create the function handlesubmit
   const handleSubmit = (e) => {
-    // 03. Prevent the automatic refresh of the page
     e.preventDefault();
-    // 04. Create the blog object
     const blog = { title, body, author };
 
-    console.log(blog);
+    // 03. Handle the Loading
+    setIsPending(true);
+
+    // 01. Make a fetch api
+    fetch('http://localhost:8000/blogs', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(blog)
+    }).then(() =>{
+      console.log('new blog added')
+      // 04. Loading complete
+      setIsPending(false);
+    })
   }
 
   return ( 
     <div className="create">
       <h2>Add a New Blog</h2>
-      {/* 02. Attach the handlesubmit function */}
       <form onSubmit={handleSubmit}>
         <label>Blog Title:</label>
         <input
@@ -43,7 +53,9 @@ const Create = () => {
           <option value="mario">mario</option>
           <option value="yoshi">yoshi</option>
         </select>
-        <button>Add Blog</button>
+        {/* 05. Surround the button and set the loading */}
+        { !isPending && <button>Add Blog</button>}
+        { isPending && <button disabled>Adding Blog...</button>}
       </form>
     </div>
   );

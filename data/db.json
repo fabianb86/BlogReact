@@ -1,17 +1,28 @@
-{ 
+{
   "blogs": [
     {
       "title": "My first blog",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted",
-      "author":"mario",
+      "author": "mario",
       "id": 1
     },
     {
       "title": "Opening party!",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted",
-      "author":"yoshi",
+      "author": "yoshi",
       "id": 2
+    },
+    {
+      "title": "Test 1",
+      "body": "Primer blog añadido",
+      "author": "mario",
+      "id": 3
+    },
+    {
+      "title": "Test 2",
+      "body": "Segundo blog",
+      "author": "yoshi",
+      "id": 4
     }
-    
   ]
 }
