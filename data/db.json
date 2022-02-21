@@ -1,16 +1,22 @@
 {
   "blogs": [
     {
-      "title": "My first blog",
+      "title": "Blog # 01",
       "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted",
-      "author": "mario",
-      "id": 1
+      "author": "Mike",
+      "id": 2
     },
     {
-      "title": "Opening party!",
-      "body": "Why do we use it?\nIt is a long established fact that a reader will be distracted",
-      "author": "yoshi",
-      "id": 2
+      "title": "Blog # 03",
+      "body": "Magna excepteur irure laboris consectetur nostrud deserunt consequat nulla pariatur nostrud. Proident sint voluptate officia id officia. Deserunt Lorem Lorem eu et reprehenderit ipsum.\n\nDo tempor excepteur ea ex. Voluptate veniam consequat officia consectetur Lorem fugiat nostrud. Magna tempor est culpa ad enim enim officia commodo cillum duis nisi. Excepteur mollit ad in laboris aute. Esse aliquip nisi officia ullamco commodo veniam culpa esse aliqua sit ipsum quis laborum. Aute elit ipsum sint nostrud esse enim proident non sint adipisicing tempor excepteur.\n\nExcepteur pariatur ullamco occaecat nulla excepteur ullamco ea. Dolore enim eu magna excepteur ut ex culpa laborum pariatur veniam sit aute consectetur duis. Ex ut qui fugiat excepteur reprehenderit fugiat consectetur officia proident. Dolore tempor ad voluptate ad anim magna consectetur laboris ex ex fugiat. Eiusmod mollit non duis do pariatur laborum aute veniam irure id officia.",
+      "author": "Fabian",
+      "id": 3
+    },
+    {
+      "title": "Blog # 04",
+      "body": "Magna excepteur irure laboris consectetur nostrud deserunt consequat nulla pariatur nostrud. Proident sint voluptate officia id officia. Deserunt Lorem Lorem eu et reprehenderit ipsum.\n\nDo tempor excepteur ea ex. Voluptate veniam consequat officia consectetur Lorem fugiat nostrud. Magna tempor est culpa ad enim enim officia commodo cillum duis nisi. Excepteur mollit ad in laboris aute. Esse aliquip nisi officia ullamco commodo veniam culpa esse aliqua sit ipsum quis laborum. Aute elit ipsum sint nostrud esse enim proident non sint adipisicing tempor excepteur.\n\nExcepteur pariatur ullamco occaecat nulla excepteur ullamco ea. Dolore enim eu magna excepteur ut ex culpa laborum pariatur veniam sit aute consectetur duis. Ex ut qui fugiat excepteur reprehenderit fugiat consectetur officia proident. Dolore tempor ad voluptate ad anim magna consectetur laboris ex ex fugiat. Eiusmod mollit non duis do pariatur laborum aute veniam irure id officia.",
+      "author": "Mike",
+      "id": 4
     }
   ]
 }
